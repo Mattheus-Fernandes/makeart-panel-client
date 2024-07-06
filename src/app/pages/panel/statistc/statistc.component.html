@@ -1,0 +1,36 @@
+<div class="statistic">
+  <div class="flex justify-between gap-3  md:w-1/2 md:mx-auto">
+    <app-card *ngFor="let card of valueCards" [value]="card.value" [text]="card.text"/>
+  </div>
+  <div class="flex-1 bg-white rounded-md p-3 overflow-hidden">
+    <div class="h-full overflow-auto md:flex justify-between">
+      <div class="mb-8 md:w-1/4">
+        <h2 class="statistic-title">Mais vendidos</h2>
+        <ul>
+          <li 
+            class="statistic-li flex justify-between" 
+            *ngFor="let product of bestSellers"  
+            [routerLink]="['/panel/details', product._id]"
+          >
+            <p class="statistic-p">{{product.product}}</p>
+            <p class="statistic-p">{{product.brand}}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="md:w-1/4">
+        <h2 class="statistic-title">Últimos cadastros</h2>
+        <ul>
+          <li 
+            class="statistic-li flex justify-between"
+            *ngFor="let product of lastestRegistrations"  
+            [routerLink]="['/panel/details', product._id]"
+          >
+          <p class="statistic-p">{{product.product}}</p>
+          <p class="statistic-p">{{product.brand}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="scheduling">
+  <div class="h-full overflow-auto">
+    <h1 class="title">Agendamento</h1>
+      <form class="flex flex-col gap-3" [formGroup]="schedulingForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label class="label">Nome cliente</label>
+          <input type="text" class="input" formControlName="clientName">
+        </div>
+        <div>
+          <label class="label">Produto(os)</label>
+          <textarea type="text" class="textarea-scheduling" formControlName="bag"></textarea>
+        </div>
+        <div>
+          <label class="label">Dia</label>
+          <input type="date" class="input" formControlName="day">
+        </div>
+        <div>
+          <label class="label">Pagamento</label>
+          <select class="w-full bg-slate-200 p-2 text-lg rounded-md outline-none md:text-base" formControlName="paymentStatus">
+            <option class="option-text">-- Selecione --</option>
+            <option value="Efetuado" class="option-text">Efetuado</option>
+            <option value="Pendente" class="option-text">Pendente</option>
+          </select>
+        </div>
+        <button class="btn">Agendar</button>
+      </form>
+  </div>
+</div>
+<app-alert-message [getMsg]="msg" [getHasMsg]="hasMsg" [getDone]="done"/>

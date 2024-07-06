@@ -1,0 +1,37 @@
+<div class="details">
+  <div class="h-1/3 mx-auto md:h-1/2">
+    <img [src]="data?.urlImage" [alt]="data?.product" class="h-full">
+  </div>
+  <div class="flex-1">
+    <div class="h-full flex flex-col gap-3">
+      <ul class="text-slate-600 text-xl flex flex-col gap-2 md:text-base">
+        <li>
+          <p>Produto: {{data?.product}}</p>
+        </li>
+        <li>
+          <p>Marca: {{data?.brand}}</p>
+        </li>
+        <li>
+          <p>Valor: R${{data?.price}}</p>
+        </li>
+        <li>
+          <p>Vendidos: {{data?.sales}}</p>
+        </li>
+        <li>
+          <p>Disponíveis: {{data?.amount - data?.sales}}</p>
+        </li>
+      </ul>
+      <div class="flex items-center justify-center w-full h-full text-lg gap-3 flex-wrap md:text-base">
+        <a 
+          class="btn-details bg-yellow-400 hover:bg-yellow-300"
+          [routerLink]="['/panel/edit-product', data?._id]"
+        >Editar</a>
+        <button class="btn-details bg-red-500 hover:bg-red-400" (click)="deleteProduct(data?._id)">Excluir</button>
+        <a 
+          class="btn-details bg-purple-800 hover:bg-purple-600"
+          routerLink="/panel/products"
+        >Ver produtos</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<header class="bg-white p-6 flex justify-between items-center relative">
+  <p class="text-2xl">Painel Makeart</p>
+  <nav class="hidden md:block">
+    <ul class="flex gap-5">
+      <li>
+        <a routerLink="statistic" class="aHeader">Início</a>
+      </li>
+      <li>
+        <a routerLink="new-product" class="aHeader">Cadastrar</a>
+      </li>
+      <li>
+        <a routerLink="products" class="aHeader">Produtos</a>
+      </li>
+      <li>
+        <a routerLink="scheduling" class="aHeader">Agendamento</a>
+      </li>
+      <li>
+        <a routerLink="schedules" class="aHeader">Agendados</a>
+      </li>
+      <li>
+        <a routerLink="replacements" class="aHeader">Reposições</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!--Menu-->
+  <div class="md:hidden">
+    <i class="fa-solid fa-bars text-3xl" (click)="toggleMenu()"></i>
+  </div>
+  <div 
+    class="absolute top-0 w-2/3 h-screen bg-white z-50 p-6 shadow-2xl shadow-black transition-all duration-700"
+    [ngClass]="{
+      'right-0': isClassVisible,
+      '-right-full': !isClassVisible
+    }"  
+  >
+    <div class="flex justify-end">
+      <i class="fa-solid fa-xmark text-4xl" (click)="toggleMenu()"></i>
+    </div>
+    <ul class="text-xl flex flex-col gap-6">
+      <li>
+        <a routerLink="statistic">Início</a>
+      </li>
+      <li>
+        <a routerLink="new-product">Cadastrar</a>
+      </li>
+      <li>
+        <a routerLink="products">Produtos</a>
+      </li>
+      <li>
+        <a routerLink="scheduling">Agendamento</a>
+      </li>
+      <li>
+        <a routerLink="schedules">Agendados</a>
+      </li>
+      <li>
+        <a routerLink="replacements">Reposições</a>
+      </li>
+    </ul>
+  </div>
+</header>

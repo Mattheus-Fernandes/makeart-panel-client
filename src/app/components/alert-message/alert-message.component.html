@@ -1,0 +1,12 @@
+<span 
+  class="absolute flex items-center text-lg text-white py-1 px-5 rounded-s-md top-24 z-20 transition-all duration-500 md:text-base md:items-start"
+  [ngClass]="{
+    'bg-green-600': hasMsg && done,
+    'bg-red-500': hasMsg && !done,
+    '-right-full': !hasMsg,
+    'right-0': hasMsg}"
+  (click)="hiddenMsg()"
+  >
+    {{msg}}
+  <i class="fa-solid fa-xmark text-3xl ml-2 cursor-pointer md:text-xl"></i>
+</span>

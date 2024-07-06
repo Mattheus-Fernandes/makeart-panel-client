@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Pages
+*/
+.statistic {
+  @apply h-full rounded-md p-3 flex flex-col gap-3;
+}
+
+.new-product {
+  @apply h-full bg-white rounded-md p-3 overflow-hidden md:w-1/2 md:mx-auto;
+}
+
+.edit-product {
+  @apply h-full bg-white rounded-md p-3 overflow-hidden md:w-1/2 md:mx-auto;
+}
+
+.products {
+  @apply h-full bg-white rounded-md p-3 flex flex-col gap-3;
+}
+
+.scheduling {
+  @apply h-full bg-white rounded-md p-3 overflow-hidden md:w-1/2 md:mx-auto;
+}
+
+.replacements {
+  @apply h-full bg-white p-3 rounded-md overflow-hidden;
+}
+
+.details {
+  @apply h-full bg-white rounded-md flex flex-col p-3 gap-3 md:w-1/2 md:mx-auto;
+}
+
+
+/*Texts*/
+.title {
+  @apply text-center text-2xl mb-5;
+}
+
+.statistic-title {
+  @apply text-slate-800 text-2xl mb-2;
+}
+
+.statistic-p {
+  @apply text-lg text-slate-500 md:text-base;
+}
+
+.label {
+  @apply block text-lg md:text-base md:mb-1;
+}
+
+.option-text {
+  @apply text-base md:text-lg;
+}
+
+
+/*Inputs*/
+.input {
+  @apply text-xl w-full bg-slate-200 p-1.5 rounded-md border-none outline-none md:text-base;
+}
+
+.input-products {
+  @apply w-full text-xl border-2 border-slate-400 rounded-md p-1 md:text-base outline-none;
+}
+
+.textarea-scheduling {
+  @apply w-full h-32 bg-slate-200 p-2 text-xl rounded-md resize-none outline-none md:text-base;
+}
+
+
+/*Buttons*/
+.btn {
+  @apply py-2 px-3 text-xl text-white rounded-md bg-purple-800 hover:bg-purple-600 transition-all duration-500 md:py-1.5 md:self-start md:text-base;
+}
+
+.btn-action {
+  @apply text-white py-1 px-2 rounded-md;
+}
+
+.btn-back {
+  @apply py-1 px-2 text-lg text-white rounded-md bg-purple-800 hover:bg-purple-600 transition-all duration-500 md:self-start md:text-base;
+}
+
+.btn-details {
+  @apply text-white py-2 px-4 rounded-md border-transparent border-2 transition-all duration-500 md:py-1 md:px-3;
+}
+
+
+/*Others*/
+.statistic-li {
+  @apply py-0.5 cursor-pointer hover:underline;
+}
+
+.paymentSuccess {
+  @apply w-5 h-5 bg-green-500 rounded-full;
+}
+
+.paymentPending {
+  @apply w-5 h-5 bg-red-500 rounded-full;
+} 
+
+.aHeader {
+  @apply block transition-all duration-300 hover:text-white hover:bg-purple-800 py-1 px-2 rounded-md;
+}
+
+.productAvailable {
+  @apply flex items-center justify-between p-2 text-slate-600 border-b-2 hover:bg-slate-200 md:p-1;
+}
+
+.productUnavailable {
+  @apply flex items-center justify-between p-2 bg-red-300 text-white border-b-2 rounded-sm;
+}

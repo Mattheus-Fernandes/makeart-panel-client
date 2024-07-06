@@ -1,0 +1,26 @@
+<div class="bg-purple-900 h-screen flex items-center justify-center">
+
+  <div 
+    class="bg-white w-11/12/12 md:w-1/4 h-auto rounded-md flex items-center"
+    [ngClass]="{'vibration': hasMsg}"
+  >
+    <form class="w-full p-5" [formGroup]="myForm">
+      <h1 class="title">Painel de controle Makeart</h1>
+      <p [ngClass]="{
+        'text-base text-red-500 transition-all duration-300': hasMsg,
+        'opacity-0': !hasMsg
+      }">Ops!! Ocorreu um erro, tente novamente.</p>
+     <div class="mb-4">
+      <label class="label">Email</label>
+      <input type="text" class="input" formControlName="email">
+     </div>
+     <div class="mb-4">
+      <label class="label">Senha</label>
+      <input type="password" class="input" formControlName="password">
+     </div>
+    
+     <button class="btn w-full mb-4 !text-xl" (click)="login()">Entrar</button>
+     <a class="btn-back" routerLink="/">Voltar</a>
+    </form>
+  </div>
+</div>

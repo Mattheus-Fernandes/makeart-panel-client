@@ -1,0 +1,32 @@
+<div class="new-product">
+  <div class="h-full overflow-auto">
+    <h1 class="title">Cadastrar</h1>
+    <form [formGroup]="newProductForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-3">
+      <div>
+        <label class="label">URL Imagem</label>
+        <input type="text" class="input" formControlName="urlImage">
+      </div>
+      <div>
+        <label class="label">Produto</label>
+        <input type="text" class="input" formControlName="product">
+      </div>
+      <div>
+        <label class="label">Marca</label>
+        <input type="text" class="input" formControlName="brand">
+      </div>
+      <div>
+        <label class="label">Quantidade</label>
+        <input type="text" class="input" formControlName="amount">
+      </div>
+      <div>
+        <label class="label">Valor</label>
+        <input type="text" class="input" formControlName="price">
+      </div>
+      <button class="btn">Cadastrar</button>
+    </form>
+  </div>
+</div>
+
+<app-alert-message [getMsg]="msg" [getHasMsg]="hasMsg" [getDone]="done"/>
+
+
