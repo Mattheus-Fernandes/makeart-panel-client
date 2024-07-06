@@ -106,9 +106,9 @@
 }
 
 .productAvailable {
-  @apply flex items-center justify-between p-2 text-slate-600 border-b-2 hover:bg-slate-200 md:p-1;
+  @apply flex items-center justify-between p-2 text-slate-600 border-b-2 md:hover:bg-slate-200 md:p-1;
 }
 
 .productUnavailable {
-  @apply flex items-center justify-between p-2 bg-red-300 text-white border-b-2 rounded-sm;
+  @apply flex items-center justify-between p-2 bg-red-400 text-white rounded-sm md:p-1;
 }
