@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductsService {
 
 
-  private apiUrl:string = "https://makeart-serve-dcmz.onrender.com/api/product"
+  private apiUrl:string = "https://makeartservice.com.br/api/product"
 
   constructor(private http: HttpClient) { }
 
