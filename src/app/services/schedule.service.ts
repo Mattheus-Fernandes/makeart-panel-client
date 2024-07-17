@@ -7,7 +7,7 @@ import { Observable } from 'rxjs'
 })
 export class ScheduleService {
 
-  private apiUrl:string = "https://makeartservice.com.br/api/product"
+  private apiUrl:string = "https://makeartservice.com.br/api/schedule"
 
   constructor(private http: HttpClient) { }
 
